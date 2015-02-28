@@ -1,7 +1,7 @@
 <?php
 
 	//Leave all this stuff as it is
-	date_default_timezone_set('Europe/London');
+	date_default_timezone_set('Asia/Tehran');
 	include 'GIFEncoder.class.php';
 	include 'php52-fix.php';
 	$time = $_GET['time'];
@@ -18,12 +18,12 @@
 	$delay = 100;// milliseconds
 
 	$font = array(
-		'size'=>23, // Font size, in pts usually.
+		'size'=>81, // Font size, in pts usually.
 		'angle'=>0, // Angle of the text
-		'x-offset'=>7, // The larger the number the further the distance from the left hand side, 0 to align to the left.
-		'y-offset'=>30, // The vertical alignment, trial and error between 20 and 60.
-		'file'=>'./GillSans.ttc', // Font path
-		'color'=>imagecolorallocate($image, 55, 160, 130), // RGB Colour of the text
+		'x-offset'=>45, // The larger the number the further the distance from the left hand side, 0 to align to the left.
+		'y-offset'=>98, // The vertical alignment, trial and error between 20 and 60.
+		'file'=>'./BRoya.ttf', // Font path
+		'color'=>imagecolorallocate($image, 254, 152, 6), // RGB Colour of the text
 	);
 	for($i = 0; $i <= 60; $i++){
 		
@@ -46,7 +46,7 @@
 			// Open the first source image and add the text.
 			$image = imagecreatefrompng('images/countdown.png');
 			;
-			$text = $interval->format('0%a %H %I %S');
+			$text = $interval->format('0%a   %H   %I   %S');
 			imagettftext ($image , $font['size'] , $font['angle'] , $font['x-offset'] , $font['y-offset'] , $font['color'] , $font['file'], $text );
 			ob_start();
 			imagegif($image);
