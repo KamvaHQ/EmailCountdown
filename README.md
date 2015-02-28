@@ -1,6 +1,4 @@
 #EmailCountdown
-==============
-
 
 **What does this do?**
 
