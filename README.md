@@ -24,3 +24,7 @@ This generates an image based on the following variables:
 ##How to use it?
 You can add an image to your newsletter with ?time= query. for example, example.com/gif.php?time=tomorrow will generate a live gif countdown to tomorrow. time query could be any [strtotime](http://php.net/manual/en/function.strtotime.php) value.
 ![Time to next monday](http://niloofarestakhri.com/lab/gif.php?time=next%20monday)
+
+##How to insert this image in emails?
+You need to edit HTML code of your email and add the following:
+`<img src="http://domain.com/gif.php?time=next%20monday>`
